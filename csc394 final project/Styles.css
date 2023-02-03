@@ -23,10 +23,20 @@
                 background-color: white;
                 
             }
-
             nav a:hover{
             background-color: rgba(77, 83, 85, 0.194);
             box-shadow: 2px 2px 0px navy;
             transform: translate(-2px,-2px);
             }
-            h1{text-align: center; color: #495867;}
+
+            h1{
+                text-align: center; 
+                color: #495867;
+                font-family: arial;
+            }
+
+            p{
+                text-align: center;
+                color: #495867;
+                font-family: arial;
+            }
