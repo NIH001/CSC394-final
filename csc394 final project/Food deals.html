@@ -4,38 +4,50 @@
     <head>
         <meta charset="utf-8">
         <title> Restaurant Deals</title>
+        <link rel="stylesheet" href="Styles.css">
         <style>
-            body{
-                background-color: #BDD5EA;
+            .row{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+            }            
+            /* Float four columns side by side */
+            .column {
+              float: left;
+              width: 25%;
+              padding: 0 20px;
             }
-            nav {
-                text-align: center;
-                padding-top: 3px;
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
             }
-                nav a{
-                font-family: arial;
-                color: #495867;
-                font-size: 24px;
-                text-decoration: none;
-                font-weight: bold;
-                padding-top: 10px;
-                padding-left: 10px;
-                padding-right: 10px;
-                padding-bottom: 10px;  
-                display: inline-block;
-                border: 2px solid navy;
+            
+            /* Responsive columns */
+            @media screen and (max-width: 600px) {
+              .column {
+                width: 100%;
+                display: block;
+                margin-bottom: 20px;
+              }
             }
-            nav a:link{
-                background-color: white;
-                
+            
+            /* Style the counter cards */
+            .card {
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+              padding: 10px;
+              text-align: center;
+              background-color: white;
+              border-radius: 5px
             }
-
-            nav a:hover{
-            background-color: rgba(77, 83, 85, 0.194);
-            box-shadow: 2px 2px 0px navy;
-            transform: translate(-2px,-2px);
-            }
-        </style>
+            .card:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+             }
+            
+            </style>
     </head>
     <body>
         <div id="main">
@@ -65,5 +77,33 @@
                 </a>
             </nav>
         </div>
+
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="images/sample_restaurant.jpg" style="width:100%">
+                <h3>Restaurant Name 1</h3>
+                <p>BOGO</p>
+              </div>
+            </div>
+          
+            <div class="column">
+              <div class="card">
+                <img src="images/sample_restaurant.jpg" style="width:100%">
+                <h3>Restaurant Name 2</h3>
+                <p>Insert deal here</p>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <img src="images/sample_restaurant.jpg" style="width:100%">
+                <h3>Restaurant Name 3</h3>
+                <p>Another deal</p>
+              </div>
+            </div>
+            
+          </div>
+        
     </body>
 </html>
